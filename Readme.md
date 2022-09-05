@@ -5,7 +5,4 @@
 - git clone
 - yarn install
 - yarn hardhat node
-- yarn hardhat run scripts/propose.tx --network localhost
-- yarn hardhat run scripts/vote.tx --network localhost
-
-- yarn hardhat test --grep "test discription"
+- yarn hardhat test
