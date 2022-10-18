@@ -17,6 +17,7 @@ const RINKEBY_RPC_URL =
   process.env.RINKEBY_RPC_URL || "https://eth-rinkeby.alchemyapi.io/v2/your-api-key"
 const PRIVATE_KEY = process.env.PRIVATE_KEY || ""
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || ""
+const QUICKNODE_RPC_URL = process.env.QUICKNODE_RPC_URL;
 
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
@@ -33,6 +34,10 @@ const config: HardhatUserConfig = {
       url: RINKEBY_RPC_URL,
       accounts: [PRIVATE_KEY],
       chainId: 4,
+    },
+    goerli: {
+      url: QUICKNODE_RPC_URL,
+      accounts: [PRIVATE_KEY],
     },
     matic: {
       url: "https://rpc-mainnet.maticvigil.com/",
@@ -51,7 +56,34 @@ const config: HardhatUserConfig = {
         },
       },
       {
+        version: "0.8.4",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+      {
+        version: "0.8.13",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+      {
         version: "0.6.7",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+      {
+        version: "0.7.6",
         settings: {
           optimizer: {
             enabled: true,
