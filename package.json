@@ -35,9 +35,11 @@
   "dependencies": {
     "@flashbots/ethers-provider-bundle": "^0.5.0",
     "@openzeppelin/contracts": "^4.7.1",
+    "@types/web3": "^1.2.2",
     "base64-sol": "1.0.1",
     "keccak256": "^1.0.6",
-    "merkletreejs": "^0.2.32"
+    "merkletreejs": "^0.2.32",
+    "web3": "^1.8.0"
   },
   "scripts": {
     "lint": "solhint 'contracts/*.sol'",
